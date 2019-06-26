@@ -19,7 +19,6 @@ Please find the Linux and Windows version on Vicon website.
 Please note that you should modify <code>ViconDataStreamSDK_CPPTest.cpp</code> file based upon your needs. The process is as follow:
 
 I. Use your text editor to comment out some unnecessary output of the <code>ViconDataStreamSDK_CPPTest.cpp</code> script. Save and rename it, for example 
-
 <code>ViconDataStreamSDK_CPPTest_dataStream.cpp</code> 
 
 II. Run the following command line in your terminal. This compile to a binary <code>vicon-dataStream</code>.
@@ -28,7 +27,7 @@ II. Run the following command line in your terminal. This compile to a binary <c
 
 III. Specify the IP address and you should be able to connect to your MoCap hosting computer.
 
-<code>./vicon-dataStream</code>
+<code>./vicon-dataStream 172.28.146.79:801</code>
 
 I have another example, <code>perf-ieeegem</code> compiled from <code>ViconDataStreamSDK_CPPTest_dataStream_sliced.cpp</code>. I used it for real-time music composing based on dancer movement in a performance in IEEE Games Entertainment & Media Conference 2019. Becuase Max/MSP cannot digest too much information all at once, I have to only keep the translation value information of the markers that I need before it is streamed into the software.
 
