@@ -30,7 +30,7 @@ III. Specify the IP address and you should be able to connect to your MoCap host
 <code>./vicon-dataStream 172.28.146.79:801</code>
 
 
-I have another example, <code>perf-ieeegem</code>, compiled from <code>ViconDataStreamSDK_CPPTest_dataStream_sliced.cpp</code>. I used it for real-time music composing based on dancer movement in a performance in IEEE Games Entertainment & Media Conference 2019. Becuase Max/MSP cannot digest too much information all at once, I have to only keep the translation value information of the markers that I need before it is streamed into the software.
+I have another example, <code>perf-ieeegem</code>, compiled from <code>ViconDataStreamSDK_CPPTest_dataStream_sliced.cpp</code>. I used it for real-time music composing based on the captured dancer movements in a performance during the IEEE Games Entertainment & Media Conference 2019. Becuase Max/MSP cannot digest too much information all at once, I have to only keep the translation value information of the markers that I need before it is streamed into the software. Here in this case, the C++ file.
 
 In Max/MSP, I used <code>shell</code> object (https://github.com/jeremybernstein/shell/releases/tag/1.0b2) and <code>zl</code>object (https://docs.cycling74.com/max5/refpages/max-ref/zl.html). If you only want to bring the object tracking data from Vicon Tracker out to another software like Max/MSP, you should try <code>udpstream</code> before going this route.
 
