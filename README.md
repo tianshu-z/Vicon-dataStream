@@ -35,4 +35,4 @@ I have another example, <code>perf-ieeegem</code>, compiled from <code>ViconData
 In Max/MSP, I used <code>shell</code> object (https://github.com/jeremybernstein/shell/releases/tag/1.0b2) and <code>zl</code>object (https://docs.cycling74.com/max5/refpages/max-ref/zl.html). If you only want to bring the object tracking data from Vicon Tracker out to another software like Max/MSP, you should try <code>udpstream</code> before going this route.
 
 
-We also used the same method to stream data into a autoencoder neural network (https://github.com/mariel-pettee/choreography) and then a localhost webpage in real time.
+We also used the same method to stream data into an autoencoder neural network (https://github.com/mariel-pettee/choreography) and then a localhost webpage in real time.
