@@ -6,6 +6,8 @@ Please find the Linux and Windows version on Vicon website.
 
 #### 1. Download the folder
 
+<code> gitclone https://github.com/tianshu-z/Vicon-dataStream </code>
+
 
 #### 2. Change the current directory to where your folder is located. For example:
 
@@ -36,3 +38,43 @@ In Max/MSP, I used <code>shell</code> object (https://github.com/jeremybernstein
 
 
 We also used the same method to stream data into an autoencoder neural network (https://github.com/mariel-pettee/choreography) and then a localhost webpage in real time.
+
+
+### Supplimentary:
+
+I have a sample included in this repository. In this sample, you can use hands (specifically the joints of phalanges and metacarpal bones on your index fingers) to control the volume of the sound and the height of your body (specifically T10, the center on your back).
+
+
+Prerequisite: 
+
+<a href = "https://cycling74.com/">Max 8</a> (Max 7 should work but I didn't test it on 7.)
+
+<a href = "https://github.com/jeremybernstein/shell/releases/tag/1.0b2">Shell library </a> for Max/MSP
+
+<a href = "https://www.vicon.com/">Vicon Motion Capture System</a>
+
+Vicon Shogun Software and full body tracking set up. (Note: unlike udp streaming on Vicon Tracker, you don't need to do any pre-setup for out data streaming here. It just runs.)
+
+macOS
+
+
+1. Open your terminal
+
+2. Download the repository
+
+<code> gitclone https://github.com/tianshu-z/Vicon-dataStream </code>
+
+
+3. Change your directory
+
+<code> cd Vicon-dataStream/Mac/ </code>
+
+4. Open up the Max/MSP patcher <code>dataStream-test_sineWave.maxpat</code> in the folder. You need to change the directory to your. Right now, it is <code>/Users/zoe/Vicon-dataStream/Mac/dataStream.log</code>
+
+5. In the terminal, run
+
+<code>./vicon-test 172.28.146.79:801 | dataStream.log</code>
+
+6. Run your max patcher
+
+You should be able to see data stream on both your terminal and your max console, which also means you can hear the sinewave now.
